@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const baseURL = "https://pan-api-five.vercel.app";
+export const baseURL = "https://pan-backend.vercel.app";
 
 export default axios.create({
   baseURL,
