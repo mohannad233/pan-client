@@ -56,9 +56,6 @@ const Home = () => {
         <Link to="/menu" className="nav-link">
           منيو المطعم - FOOD MENU
         </Link>
-        <Link to="/menu" className="nav-link">
-          منيو المطعم - FOOD MENU
-        </Link>
         <Link to="/contact" className="nav-link">
           تواصل معنا - Contact Us
         </Link>
