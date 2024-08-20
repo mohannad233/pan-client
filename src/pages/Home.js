@@ -14,14 +14,14 @@ import "./Home.css";
 import logo from "../images/logo.jpg";
 
 const Home = () => {
-  const [displayText, setDisplayText] = useState("بان تكا ");
+  const [displayText, setDisplayText] = useState("بان تكا");
 
   useEffect(() => {
     const interval = setInterval(() => {
       setDisplayText((prevText) => (prevText === "بان تكا" ? "pan tikkah" : "بان تكا"));
-    }, 3000); // تبديل النص كل 3 ثواني
+    }, 3000);
 
-    return () => clearInterval(interval); // تنظيف المؤقت عند إلغاء التثبيت
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -81,7 +81,7 @@ const Home = () => {
           <FaHeart className="nav-icon" /> قيمنا - Values
         </a>
       </nav>
-      <div className="home-background"></div> {/* إضافة الخلفية */}
+      <div className="home-background"></div>
     </div>
   );
 };

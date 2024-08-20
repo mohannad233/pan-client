@@ -62,7 +62,7 @@ body {
   font-size: 18px;
   padding: 15px;
   border-radius: 30px;
-  transition: background-color 0.3s, transform 0.3s;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .nav-icon {
@@ -72,6 +72,7 @@ body {
 .nav-link:hover {
   background-color: #b18cd9;
   transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .social-icons {
@@ -124,7 +125,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #4B0082;
-  margin-top: -10px; /* لتحريك النص للأعلى قليلاً */
+  margin-top: -10px; 
   transition: color 0.5s;
 }
 
