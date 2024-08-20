@@ -46,8 +46,8 @@
 
 .icons-container {
     position: absolute;
-    bottom: -50px;
-    left: 50px; /* تم تغيير الموضع إلى اليسار */
+    bottom: -10px;
+    left: 20px; /* تم تغيير الموضع إلى اليسار */
     display: flex;
     justify-content: center;
 }
