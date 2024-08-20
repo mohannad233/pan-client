@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faLocationArrow, // أيقونة جديدة للموقع
-  faClipboardList, // أيقونة جديدة للقائمة الذكية
-  faCommentDots, // أيقونة جديدة لرأيك يهمنا
-  faHouseUser, // أيقونة جديدة للصفحة الرئيسية
+  faLocationArrow,
+  faClipboardList,
+  faCommentDots,
+  faHouseUser,
   faFire,
+  faBreadSlice, // أيقونة للسندويتشات
+  faDrumstickBite, // أيقونة للصوصات
+  faGlassWhiskey, // أيقونة للعصيرات
+  faEgg, // أيقونة للفطور
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -93,12 +97,9 @@ const Menu = () => {
       <Header />
       <div className="secondary-icons">
         <div className="icon-item">
-          <Link
-            to="/"
-            className="home-icon"
-          >
+          <Link to="/" className="home-icon">
             <FontAwesomeIcon
-              icon={faHouseUser}  // أيقونة جديدة للصفحة الرئيسية
+              icon={faHouseUser}
               size="lg"
               style={{ color: "#89598c" }}
             />
@@ -113,7 +114,7 @@ const Menu = () => {
             className="no-underline"
           >
             <FontAwesomeIcon
-              icon={faLocationArrow}  // أيقونة جديدة للموقع
+              icon={faLocationArrow}
               size="2x"
               style={{ color: "#89598c" }}
             />
@@ -130,7 +131,7 @@ const Menu = () => {
             }}
           >
             <FontAwesomeIcon
-              icon={faClipboardList}  // أيقونة جديدة للقائمة الذكية
+              icon={faClipboardList}
               size="2x"
               style={{ color: "#89598c" }}
             />
@@ -139,11 +140,15 @@ const Menu = () => {
         </div>
         <div className="icon-item">
           <div
-            style={{ textAlign: "center", cursor: "pointer", color: "#89598c" }}
+            style={{
+              textAlign: "center",
+              cursor: "pointer",
+              color: "#89598c",
+            }}
             onClick={() => setShowFeedbackCard(!showFeedbackCard)}
           >
             <FontAwesomeIcon
-              icon={faCommentDots}  // أيقونة جديدة لرأيك يهمنا
+              icon={faCommentDots}
               size="2x"
               style={{ color: "#89598c" }}
             />
@@ -187,7 +192,17 @@ const Menu = () => {
             }`}
             onClick={() => scrollToSection(`section-${section}`)}
           >
-            {section}
+            <FontAwesomeIcon
+              icon={
+                section === "سندويتشات"
+                  ? faBreadSlice
+                  : section === "صوصات"
+                  ? faDrumstickBite
+                  : section === "عصيرات"
+                  ? faGlassWhiskey
+                  : faEgg
+              }
+            />
           </div>
         ))}
       </div>
