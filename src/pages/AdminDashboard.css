@@ -130,3 +130,27 @@
   color: #007bff;
   text-align: center;
 }
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr; /* Each product takes full width */
+  }
+
+  .product-details {
+    text-align: left; /* Align text to the left */
+  }
+
+  .product-details button {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .product-details h3 {
+    font-size: 16px;
+  }
+
+  .product-details p {
+    font-size: 12px;
+  }
+}
