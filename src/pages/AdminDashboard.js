@@ -78,15 +78,20 @@ const AdminDashboard = () => {
     setName(product.name);
     setPrice(product.price);
     setCalories(product.calories || "");
-    setSection(product.Sections);
+    setSection(product.section); // تعديل هنا لضمان تطابق مع البيانات من الخادم
     setAvailable(product.available ? "متاح" : "غير متاح");
     setEditMode(true);
     setEditProductId(product.id);
   };
 
   const handleDeleteProduct = async (id) => {
+    if (!id) {
+      console.error("No product id provided for deletion.");
+      return;
+    }
+
     try {
-      console.log("Trying to delete product with id:", id); // Debugging
+      console.log("Trying to delete product with id:", id);
       await axios.delete(`/products/delete/${id}`);
       console.log("Product deleted successfully.");
       fetchProducts(); // إعادة تحميل المنتجات بعد الحذف
@@ -101,7 +106,7 @@ const AdminDashboard = () => {
 
   // تنظيم المنتجات حسب الأقسام
   const groupedProducts = products.reduce((acc, product) => {
-    const section = product.Sections || "غير محدد";
+    const section = product.section || "غير محدد"; // تعديل هنا لتطابق مع اسم الخاصية الصحيح
     if (!acc[section]) {
       acc[section] = [];
     }
@@ -193,7 +198,7 @@ const AdminDashboard = () => {
                   <h3>{product.name}</h3>
                   <p>السعر: ${product.price}</p>
                   <p>السعرات الحرارية: {product.calories} kcal</p>
-                  <p>القسم: {product.Sections}</p>
+                  <p>القسم: {product.section}</p> {/* تعديل هنا لتطابق مع البيانات */}
                   <p>متاح: {product.available ? "نعم" : "لا"}</p>
                   <button
                     onClick={() => handleEditProduct(product)}
