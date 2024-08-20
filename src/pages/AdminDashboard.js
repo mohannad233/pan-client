@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   const [price, setPrice] = useState("");
   const [calories, setCalories] = useState("");
   const [image, setImage] = useState(null);
-  const [section, setSection] = useState("");
+  const [sections, setSections] = useState("");  // تعديل هنا
   const [available, setAvailable] = useState("متاح");
   const [editMode, setEditMode] = useState(false);
   const [editProductId, setEditProductId] = useState(null);
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
     formData.append("price", price);
     if (calories) formData.append("calories", calories);
     if (image) formData.append("image", image);
-    formData.append("sections", section);
+    formData.append("sections", sections);  // تعديل هنا
     formData.append("available", available === "متاح" ? "true" : "false");
 
     try {
@@ -68,7 +68,7 @@ const AdminDashboard = () => {
     setPrice("");
     setCalories("");
     setImage(null);
-    setSection("");
+    setSections("");  // تعديل هنا
     setAvailable("متاح");
     setEditMode(false);
     setEditProductId(null);
@@ -78,7 +78,7 @@ const AdminDashboard = () => {
     setName(product.name);
     setPrice(product.price);
     setCalories(product.calories || "");
-    setSection(product.section); // التأكد من استخدام الخاصية الصحيحة
+    setSections(product.sections);  // تعديل هنا
     setAvailable(product.available ? "متاح" : "غير متاح");
     setEditMode(true);
     setEditProductId(product.id);
@@ -106,7 +106,7 @@ const AdminDashboard = () => {
 
   // تنظيم المنتجات حسب الأقسام
   const groupedProducts = products.reduce((acc, product) => {
-    const section = product.section || "غير محدد";
+    const section = product.sections || "غير محدد";  // تعديل هنا
     if (!acc[section]) {
       acc[section] = [];
     }
@@ -149,8 +149,8 @@ const AdminDashboard = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
         <select
-          value={section}
-          onChange={(e) => setSection(e.target.value)}
+          value={sections}  // تعديل هنا
+          onChange={(e) => setSections(e.target.value)}  // تعديل هنا
           required
         >
           <option value="" disabled>
@@ -198,7 +198,7 @@ const AdminDashboard = () => {
                   <h3>{product.name}</h3>
                   <p>السعر: ${product.price}</p>
                   <p>السعرات الحرارية: {product.calories} kcal</p>
-                  <p>القسم: {product.section}</p>
+                  <p>القسم: {product.sections}</p>  {/* تعديل هنا */}
                   <p>متاح: {product.available ? "نعم" : "لا"}</p>
                   <button
                     onClick={() => handleEditProduct(product)}
