@@ -6,6 +6,9 @@ import {
   FaSnapchat,
   FaTiktok,
   FaUserShield,
+  FaUtensils,
+  FaPhoneAlt,
+  FaHeart
 } from "react-icons/fa";
 import "./Home.css";
 import logo from "../images/logo.jpg";
@@ -19,45 +22,45 @@ const Home = () => {
         </Link>
       </div>
       <header className="home-header">
-        <img src={logo} alt="بان تيكه" className="logo" />
-        <h1>بان i</h1>
+        <img src={logo} alt="بان تيكه" className="logo animate-logo" />
+        <h1 className="animate-text">بان i</h1>
         <div className="social-icons">
           <a
             href="https://www.instagram.com/Pan.tikka"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaInstagram size={40} />
+            <FaInstagram size={40} className="social-icon" />
           </a>
           <a
             href="https://www.whatsapp.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaWhatsapp size={40} />
+            <FaWhatsapp size={40} className="social-icon" />
           </a>
           <a
             href="https://www.snapchat.com/add/ali.yanbu"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaSnapchat size={40} />
+            <FaSnapchat size={40} className="social-icon" />
           </a>
           <a
             href="https://www.tiktok.com/@Pan.tikka"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaTiktok size={40} />
+            <FaTiktok size={40} className="social-icon" />
           </a>
         </div>
       </header>
       <nav className="home-nav">
         <Link to="/menu" className="nav-link">
-          منيو المطعم - FOOD MENU
+          <FaUtensils className="nav-icon" /> منيو المطعم - FOOD MENU
         </Link>
         <Link to="/contact" className="nav-link">
-          تواصل معنا - Contact Us
+          <FaPhoneAlt className="nav-icon" /> تواصل معنا - Contact Us
         </Link>
         <a
           href="https://maps.app.goo.gl/vWviT2ZgCudpt7Mq5?g_st=com.google.maps.preview.copy"
@@ -65,9 +68,8 @@ const Home = () => {
           rel="noopener noreferrer"
           className="nav-link"
         >
-          قيمنا - Values
-        </a>{" "}
-        {/* تعديل الرابط هنا */}
+          <FaHeart className="nav-icon" /> قيمنا - Values
+        </a>
       </nav>
       <div className="home-background"></div> {/* إضافة الخلفية */}
     </div>
