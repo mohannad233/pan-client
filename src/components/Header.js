@@ -18,9 +18,7 @@ const Header = () => {
 
   return (
     <header className="menu-header">
-      <div className="background-container">
-        <img src={background} alt="Background" className="background-image" />
-      </div>
+      <img src={background} alt="Background" className="background-image" />
       <div className="header-content">
         <div className="logo-container">
           <img src={logo} alt="Logo" className="logo-image" />
