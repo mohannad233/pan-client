@@ -6,6 +6,7 @@ import {
   faComment,
   faFire,
   faHome,
+  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";

@@ -5,47 +5,47 @@
     padding: 0 3vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
-}
-
-.secondary-icons {
+  }
+  
+  .secondary-icons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    margin-top: 8vh;
+    margin-top: 5vh; /* رفع الأيقونات */
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
-}
-
-.icon-item {
+  }
+  
+  .icon-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #89598c;
-    max-width: 25vw;
-    margin-top: 4vh;
+    max-width: 20vw;
+    margin-top: 2vh;
     text-decoration: none;
-}
-
-.icon-item span {
+  }
+  
+  .icon-item span {
     margin-top: 1vh;
     font-size: 3.5vw;
     text-align: center;
     color: inherit;
     display: block; /* تأكيد أن النص يظهر تحت الأيقونة */
-}
-
-.sections-grid {
+  }
+  
+  .sections-grid {
     display: flex;
     justify-content: start;
     gap: 15px;
     padding: 15px 0;
     overflow-x: auto;
     white-space: nowrap;
-}
-
-.sticky-sections {
+  }
+  
+  .sticky-sections {
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,9 +53,9 @@
     backdrop-filter: blur(10px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding-top: 10px;
-}
-
-.section-item {
+  }
+  
+  .section-item {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
@@ -67,101 +67,103 @@
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
-}
-
-.section-item.active {
+  }
+  
+  .section-item.active {
     background-color: #89598c;
     color: #ffffff;
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-.menu-content {
+  }
+  
+  .menu-content {
     flex: 1;
     padding: 1vh 3vw; /* تقليل المسافة الفاصلة من الأعلى */
-    margin-top: 0vh;  /* إزالة الهامش العلوي لرفع المنيو */
+    margin-top: 0vh; /* إزالة الهامش العلوي لرفع المنيو */
     overflow-x: hidden;
-}
-
-.menu-section {
+  }
+  
+  .menu-section {
     margin-bottom: 4vh;
-}
-
-.section-title {
+  }
+  
+  .section-title {
     font-size: 4vw;
     color: #333;
     padding-bottom: 10px;
     margin-bottom: 20px;
-}
-
-.product-list {
+  }
+  
+  .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 15px;
-}
-
-.product-card {
+  }
+  
+  .product-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 1px solid #ddd;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-}
-
-.product-card:hover {
+  }
+  
+  .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.product-image {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-image {
     width: 100%;
     height: auto;
     max-height: 120px;
     object-fit: cover;
-}
-
-.product-info {
+  }
+  
+  .product-info {
     padding: 8px;
     text-align: center;
-}
-
-.product-name {
+  }
+  
+  .product-name {
     margin: 10px 0;
     font-size: 4vw;
     color: #333;
-}
-
-.product-details {
+  }
+  
+  .product-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-}
-
-.product-price, .product-calories {
+  }
+  
+  .product-price,
+  .product-calories {
     font-size: 3.5vw;
     color: #333;
     display: flex;
     align-items: center;
-}
-
-.product-price svg, .product-calories svg {
+  }
+  
+  .product-price svg,
+  .product-calories svg {
     margin-right: 5px;
     color: #b61b1b;
-}
-
-/* تأثير الضباب وإضافة النص "لاحقاً" */
-.unavailable {
+  }
+  
+  /* تأثير الضباب وإضافة النص "لاحقاً" */
+  .unavailable {
     opacity: 0.5;
     pointer-events: none;
     position: relative;
-}
-
-.unavailable::after {
+  }
+  
+  .unavailable::after {
     content: "لاحقاً";
     position: absolute;
     top: 50%;
@@ -171,90 +173,96 @@
     font-weight: bold;
     color: red;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.section-divider {
+  }
+  
+  .section-divider {
     border: none;
     height: 2px;
     background-color: #ccc;
     margin: 20px 0;
-}
-
-/* استعلامات الوسائط لجعل التصميم متجاوبًا */
-
-/* لأجهزة التابلت */
-@media (min-width: 601px) and (max-width: 1024px) {
+  }
+  
+  /* استعلامات الوسائط لجعل التصميم متجاوبًا */
+  
+  /* لأجهزة التابلت */
+  @media (min-width: 601px) and (max-width: 1024px) {
     .icon-item {
-        max-width: 20vw;
+      max-width: 20vw;
     }
-
+  
     .icon-item span {
-        font-size: 2.5vw;
+      font-size: 2.5vw;
     }
-
+  
     .section-item {
-        padding: 10px 20px;
-        font-size: 16px;
+      padding: 10px 20px;
+      font-size: 16px;
     }
-
+  
     .menu-content {
-        padding: 2vh 4vw;
+      padding: 2vh 4vw;
     }
-
+  
     .section-title {
-        font-size: 3vw;
+      font-size: 3vw;
     }
-
+  
     .product-list {
-        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     }
-
-    .product-name, .product-price, .product-calories, .product-unavailable {
-        font-size: 2.5vw;
+  
+    .product-name,
+    .product-price,
+    .product-calories,
+    .product-unavailable {
+      font-size: 2.5vw;
     }
-}
-
-/* لأجهزة الكمبيوتر المكتبية */
-@media (min-width: 1025px) {
+  }
+  
+  /* لأجهزة الكمبيوتر المكتبية */
+  @media (min-width: 1025px) {
     .icon-item {
-        max-width: 15vw;
+      max-width: 15vw;
     }
-
+  
     .icon-item span {
-        font-size: 1.4vw;
+      font-size: 1.4vw;
     }
-
+  
     .section-item {
-        padding: 10px 20px;
-        font-size: 18px;
+      padding: 10px 20px;
+      font-size: 18px;
     }
-
+  
     .menu-content {
-        padding: 2vh 5vw;
+      padding: 2vh 5vw;
     }
-
+  
     .section-title {
-        font-size: 24px;
+      font-size: 24px;
     }
-
+  
     .product-list {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-
-    .product-name, .product-price, .product-calories, .product-unavailable {
-        font-size: 16px;
+  
+    .product-name,
+    .product-price,
+    .product-calories,
+    .product-unavailable {
+      font-size: 16px;
     }
-}
-
-.icon-text {
+  }
+  
+  .icon-text {
     margin-top: 1vh;
     font-size: 3.5vw;
     text-align: center;
     color: #89598c;
-}
-
-/* بطاقة "نبذة عنا" */
-.about-card {
+  }
+  
+  /* بطاقة "نبذة عنا" */
+  .about-card {
     position: fixed;
     bottom: 400px;
     right: 20px;
@@ -267,21 +275,21 @@
     z-index: 1001;
     text-align: center;
     direction: rtl;
-}
-
-.about-card h2 {
+  }
+  
+  .about-card h2 {
     margin-bottom: 10px;
     color: #89598c;
-}
-
-.about-card p {
+  }
+  
+  .about-card p {
     color: #555;
     font-size: 14px;
     line-height: 1.5;
-}
-
-/* بطاقة "رأيك يهمنا" */
-.feedback-card {
+  }
+  
+  /* بطاقة "رأيك يهمنا" */
+  .feedback-card {
     position: fixed;
     bottom: 450px;
     right: 60px;
@@ -294,15 +302,15 @@
     z-index: 1001;
     text-align: center;
     direction: rtl;
-}
-
-.feedback-card h2 {
+  }
+  
+  .feedback-card h2 {
     margin-bottom: 10px;
     color: #89598c;
-}
-
-.feedback-card input,
-.feedback-card textarea {
+  }
+  
+  .feedback-card input,
+  .feedback-card textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -311,9 +319,9 @@
     font-size: 14px;
     direction: rtl;
     text-align: right;
-}
-
-.feedback-card button {
+  }
+  
+  .feedback-card button {
     width: 100%;
     padding: 10px;
     background-color: #89598c;
@@ -323,14 +331,14 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.feedback-card button:hover {
+  }
+  
+  .feedback-card button:hover {
     background-color: #89598c;
-}
-
-/* تصميم بطاقة المنتج (المودال) */
-.product-modal {
+  }
+  
+  /* تصميم بطاقة المنتج (المودال) */
+  .product-modal {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -344,41 +352,43 @@
     max-height: 90%;
     overflow: auto;
     animation: fadeIn 0.3s ease;
-}
-
-.modal-content {
+  }
+  
+  .modal-content {
     text-align: center;
-}
-
-.modal-content h2 {
+  }
+  
+  .modal-content h2 {
     margin-bottom: 10px;
     color: #333;
-}
-
-.modal-content img {
+  }
+  
+  .modal-content img {
     width: 100%;
     max-width: 300px;
     height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-}
-
-.modal-content .product-details {
+  }
+  
+  .modal-content .product-details {
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
-}
-
-.modal-content .product-price, .modal-content .product-calories {
+  }
+  
+  .modal-content .product-price,
+  .modal-content .product-calories {
     font-size: 18px;
     color: #333;
-}
-
-.modal-content .product-price svg, .modal-content .product-calories svg {
+  }
+  
+  .modal-content .product-price svg,
+  .modal-content .product-calories svg {
     margin-right: 5px;
-}
-
-.modal-content button {
+  }
+  
+  .modal-content button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #89598c;
@@ -388,32 +398,33 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.modal-content button:hover {
+  }
+  
+  .modal-content button:hover {
     background-color: #89598c;
-}
-
-/* تأثير الظهور */
-@keyframes fadeIn {
+  }
+  
+  /* تأثير الظهور */
+  @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translate(-50%, -40%);
+      opacity: 0;
+      transform: translate(-50%, -40%);
     }
     to {
-        opacity: 1;
-        transform: translate(-50%, -50%);
+      opacity: 1;
+      transform: translate(-50%, -50%);
     }
-}
-
-.icon-item a {
+  }
+  
+  .icon-item a {
     text-decoration: none; /* إزالة الخط السفلي من الروابط */
-}
-
-.icon-item a:hover {
+  }
+  
+  .icon-item a:hover {
     text-decoration: none; /* منع ظهور الخط السفلي عند تحريك المؤشر فوق الرابط */
-}
-
-.no-underline {
+  }
+  
+  .no-underline {
     text-decoration: none; /* إزالة الخط السفلي من الروابط */
-}
+  }
+  
