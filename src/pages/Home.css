@@ -41,16 +41,6 @@ body {
   color: #9370DB;
 }
 
-.top-bar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  background-color: #ffffff;
-  padding: 10px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
 .home-nav {
   width: 100%;
   max-width: 600px;
@@ -86,15 +76,17 @@ body {
 
 .social-icons {
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
 }
 
-.social-icon {
+.social-icons a {
   color: #4B0082;
   transition: color 0.3s, transform 0.3s;
 }
 
-.social-icon:hover {
+.social-icons a:hover {
   color: #9370DB;
   transform: scale(1.2);
 }
@@ -132,7 +124,7 @@ body {
   font-size: 24px;
   font-weight: bold;
   color: #4B0082;
-  margin-top: -10px;
+  margin-top: -10px; /* لتحريك النص للأعلى قليلاً */
   transition: color 0.5s;
 }
 
