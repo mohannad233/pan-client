@@ -1,3 +1,4 @@
+// Menu.js
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -183,17 +184,21 @@ const Menu = () => {
             }`}
             onClick={() => scrollToSection(`section-${section}`)}
           >
-            <FontAwesomeIcon
-              icon={
-                section === "سندويتشات"
-                  ? faBreadSlice
-                  : section === "صوصات"
-                  ? faDrumstickBite
-                  : section === "عصيرات"
-                  ? faGlassWhiskey
-                  : faEgg
-              }
-            />
+            <div className="icon-circle">
+              <FontAwesomeIcon
+                icon={
+                  section === "سندويتشات"
+                    ? faBreadSlice
+                    : section === "صوصات"
+                    ? faDrumstickBite
+                    : section === "عصيرات"
+                    ? faGlassWhiskey
+                    : faEgg
+                }
+                size="lg"
+              />
+            </div>
+            <span>{section}</span>
           </div>
         ))}
       </div>
