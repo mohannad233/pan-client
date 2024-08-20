@@ -99,7 +99,7 @@ const Menu = () => {
           >
             <FontAwesomeIcon
               icon={faHome}
-              size="2x"
+              size="lg"  // تصغير حجم الأيقونة
               style={{ color: "#89598c" }}
             />
             <span style={{ color: "#89598c" }}>الصفحة الرئيسية</span>
