@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMapMarkerAlt,
-  faBook,
-  faComment,
+  faLocationArrow, // أيقونة جديدة للموقع
+  faClipboardList, // أيقونة جديدة للقائمة الذكية
+  faCommentDots, // أيقونة جديدة لرأيك يهمنا
+  faHouseUser, // أيقونة جديدة للصفحة الرئيسية
   faFire,
-  faHome,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -98,11 +98,11 @@ const Menu = () => {
             className="home-icon"
           >
             <FontAwesomeIcon
-              icon={faHome}
-              size="lg"  // تصغير حجم الأيقونة
+              icon={faHouseUser}  // أيقونة جديدة للصفحة الرئيسية
+              size="lg"
               style={{ color: "#89598c" }}
             />
-            <span style={{ color: "#89598c" }}>الصفحة الرئيسية</span>
+            <span style={{ color: "#89598c" }}> </span>
           </Link>
         </div>
         <div className="icon-item">
@@ -113,7 +113,7 @@ const Menu = () => {
             className="no-underline"
           >
             <FontAwesomeIcon
-              icon={faMapMarkerAlt}
+              icon={faLocationArrow}  // أيقونة جديدة للموقع
               size="2x"
               style={{ color: "#89598c" }}
             />
@@ -130,7 +130,7 @@ const Menu = () => {
             }}
           >
             <FontAwesomeIcon
-              icon={faBook}
+              icon={faClipboardList}  // أيقونة جديدة للقائمة الذكية
               size="2x"
               style={{ color: "#89598c" }}
             />
@@ -143,7 +143,7 @@ const Menu = () => {
             onClick={() => setShowFeedbackCard(!showFeedbackCard)}
           >
             <FontAwesomeIcon
-              icon={faComment}
+              icon={faCommentDots}  // أيقونة جديدة لرأيك يهمنا
               size="2x"
               style={{ color: "#89598c" }}
             />
