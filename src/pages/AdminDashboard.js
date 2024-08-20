@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   const [price, setPrice] = useState("");
   const [calories, setCalories] = useState("");
   const [image, setImage] = useState(null);
-  const [sections, setSections] = useState("");  // تعديل هنا
+  const [sections, setSections] = useState("");  // استخدام sections
   const [available, setAvailable] = useState("متاح");
   const [editMode, setEditMode] = useState(false);
   const [editProductId, setEditProductId] = useState(null);
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
     formData.append("price", price);
     if (calories) formData.append("calories", calories);
     if (image) formData.append("image", image);
-    formData.append("sections", sections);  // تعديل هنا
+    formData.append("sections", sections);
     formData.append("available", available === "متاح" ? "true" : "false");
 
     try {
@@ -68,7 +68,7 @@ const AdminDashboard = () => {
     setPrice("");
     setCalories("");
     setImage(null);
-    setSections("");  // تعديل هنا
+    setSections("");  
     setAvailable("متاح");
     setEditMode(false);
     setEditProductId(null);
@@ -78,10 +78,10 @@ const AdminDashboard = () => {
     setName(product.name);
     setPrice(product.price);
     setCalories(product.calories || "");
-    setSections(product.sections);  // تعديل هنا
+    setSections(product.sections);  
     setAvailable(product.available ? "متاح" : "غير متاح");
     setEditMode(true);
-    setEditProductId(product.id);
+    setEditProductId(product._id); // تأكد من استخدام _id بشكل صحيح
   };
 
   const handleDeleteProduct = async (id) => {
@@ -94,7 +94,7 @@ const AdminDashboard = () => {
       console.log("Trying to delete product with id:", id);
       await axios.delete(`/products/delete/${id}`);
       console.log("Product deleted successfully.");
-      fetchProducts(); // إعادة تحميل المنتجات بعد الحذف
+      fetchProducts(); 
     } catch (error) {
       console.error("There was an error deleting the product!", error);
     }
@@ -106,7 +106,7 @@ const AdminDashboard = () => {
 
   // تنظيم المنتجات حسب الأقسام
   const groupedProducts = products.reduce((acc, product) => {
-    const section = product.sections || "غير محدد";  // تعديل هنا
+    const section = product.sections || "غير محدد";  
     if (!acc[section]) {
       acc[section] = [];
     }
@@ -149,8 +149,8 @@ const AdminDashboard = () => {
           onChange={(e) => setImage(e.target.files[0])}
         />
         <select
-          value={sections}  // تعديل هنا
-          onChange={(e) => setSections(e.target.value)}  // تعديل هنا
+          value={sections}  
+          onChange={(e) => setSections(e.target.value)}  
           required
         >
           <option value="" disabled>
@@ -186,7 +186,7 @@ const AdminDashboard = () => {
                 className={`product-card ${
                   product.available ? "" : "unavailable"
                 }`}
-                key={product.id}
+                key={product._id} // استخدام _id للتأكد من المعرف الصحيح
               >
                 <img
                   src={product.image}
@@ -198,7 +198,7 @@ const AdminDashboard = () => {
                   <h3>{product.name}</h3>
                   <p>السعر: ${product.price}</p>
                   <p>السعرات الحرارية: {product.calories} kcal</p>
-                  <p>القسم: {product.sections}</p>  {/* تعديل هنا */}
+                  <p>القسم: {product.sections}</p>  
                   <p>متاح: {product.available ? "نعم" : "لا"}</p>
                   <button
                     onClick={() => handleEditProduct(product)}
@@ -206,7 +206,7 @@ const AdminDashboard = () => {
                   >
                     تعديل
                   </button>
-                  <button onClick={() => handleDeleteProduct(product.id)}>
+                  <button onClick={() => handleDeleteProduct(product._id)}>
                     حذف
                   </button>
                 </div>
