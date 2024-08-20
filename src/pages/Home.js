@@ -32,8 +32,8 @@ const Home = () => {
           <FaUserShield size={30} />
         </Link>
       </div>
-      }
-      <header className="home-header">
+       }
+      <header classNa me="home-header">
         <img src={logo} alt="بان تيكه" className="logo animate-logo" />
         <h1 className="animate-text highlight-text">{displayText}</h1>
         <div className="social-icons">
