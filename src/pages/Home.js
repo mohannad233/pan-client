@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   FaInstagram,
@@ -14,6 +14,16 @@ import "./Home.css";
 import logo from "../images/logo.jpg";
 
 const Home = () => {
+  const [displayText, setDisplayText] = useState("بان i");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDisplayText((prevText) => (prevText === "بان i" ? "pan tikkah" : "بان i"));
+    }, 3000); // تبديل النص كل 3 ثواني
+
+    return () => clearInterval(interval); // تنظيف المؤقت عند إلغاء التثبيت
+  }, []);
+
   return (
     <div className="home">
       <div className="admin-icon">
@@ -23,7 +33,7 @@ const Home = () => {
       </div>
       <header className="home-header">
         <img src={logo} alt="بان تيكه" className="logo animate-logo" />
-        <h1 className="animate-text">بان i</h1>
+        <h1 className="animate-text highlight-text">{displayText}</h1>
         <div className="social-icons">
           <a
             href="https://www.instagram.com/Pan.tikka"
