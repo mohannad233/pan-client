@@ -20,7 +20,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.7);
 }
 
 @keyframes backgroundMove {
@@ -42,44 +41,27 @@
 }
 
 .logo-container {
-    margin-top: 150px; /* تعديل المسافة فوق الشعار */
+    margin-top: -50px; /* وضع الشعار تحت الخلفية مباشرة */
 }
 
 .logo-image {
     width: 80px; /* تقليل حجم الشعار */
     height: 80px;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(233, 72, 236, 0.6), 0 0 30px rgba(233, 72, 236, 0.4);
-    transition: box-shadow 0.5s ease-in-out;
-}
-
-.logo-image:hover {
-    box-shadow: 0 0 25px rgba(233, 72, 236, 0.8), 0 0 50px rgba(233, 72, 236, 0.6);
 }
 
 .icons-container {
     position: absolute;
-    bottom: -20px; /* تعديل المسافة تحت الأيقونات */
+    bottom: 20px; /* وضع أيقونة الهاتف في أسفل اليسار */
+    left: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .icon-item {
-    text-align: center;
-    color: #e684fa;
-    text-decoration: none;
+    color: red;
     cursor: pointer;
-}
-
-.icon-text {
-    color: red;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-.phone-icon {
-    color: red;
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .phone-icon:hover {

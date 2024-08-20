@@ -32,9 +32,7 @@ const Header = () => {
               size="2x"
               className={`phone-icon ${isCalling ? 'calling' : ''}`}
             />
-            <p className="icon-text">اتصل بنا</p>
           </div>
-          {/* أيقونات أخرى يمكن إضافتها هنا */}
         </div>
       </div>
     </header>
