@@ -14,11 +14,11 @@ import "./Home.css";
 import logo from "../images/logo.jpg";
 
 const Home = () => {
-  const [displayText, setDisplayText] = useState("بان i");
+  const [displayText, setDisplayText] = useState("بان تكا ");
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setDisplayText((prevText) => (prevText === "بان i" ? "pan tikkah" : "بان i"));
+      setDisplayText((prevText) => (prevText === "بان تكا" ? "pan tikkah" : "بان تكا"));
     }, 3000); // تبديل النص كل 3 ثواني
 
     return () => clearInterval(interval); // تنظيف المؤقت عند إلغاء التثبيت
