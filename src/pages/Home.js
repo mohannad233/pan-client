@@ -26,11 +26,13 @@ const Home = () => {
 
   return (
     <div className="home">
+      {/* 
       <div className="admin-icon">
         <Link to="/login" className="admin-link">
           <FaUserShield size={30} />
         </Link>
       </div>
+      */}
       <header className="home-header">
         <img src={logo} alt="بان تيكه" className="logo animate-logo" />
         <h1 className="animate-text highlight-text">{displayText}</h1>
