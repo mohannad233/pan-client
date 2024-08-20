@@ -1,3 +1,4 @@
+/* Menu.css */
 .menu-page {
     display: flex;
     flex-direction: column;
@@ -12,12 +13,12 @@
     justify-content: center;
     align-items: center;
     gap: 2vw;
-    margin-top: 2vh; /* رفع الأيقونات */
+    margin-top: 2vh;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     position: relative;
-    top: -20px; /* رفع الأيقونات لتكون أقرب إلى الشعار */
+    top: -20px;
 }
 
 .icon-item {
@@ -25,9 +26,20 @@
     flex-direction: column;
     align-items: center;
     color: #89598c;
-    max-width: 25vw;
+    max-width: 20vw;
     margin-top: 2vh;
     text-decoration: none;
+}
+
+.icon-item .icon-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin-bottom: 5px;
 }
 
 .icon-item span {
@@ -40,8 +52,8 @@
 
 .home-icon {
     position: absolute;
-    right: 20px; /* نقل أيقونة الهوم إلى الجهة اليمنى */
-    top: -50px; /* تعديل الموضع ليكون مقابل أيقونة الهاتف */
+    right: 20px;
+    top: -50px;
 }
 
 .sections-grid {
@@ -64,27 +76,29 @@
 }
 
 .section-item {
-    background-color: transparent; /* إزالة الخلفية البيضاء */
-    border: none; /* إزالة الحدود */
-    padding: 8px 15px;
-    text-align: center;
-    font-size: 20px; /* تكبير حجم الأيقونات */
-    color: #89598c;
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background-color: #89598c;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
 }
 
 .section-item.active {
-    color: #b61b1b; /* تغيير لون الأيقونة عند التفعيل */
+    background-color: #d16eb3;
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .menu-content {
     flex: 1;
-    padding: 1vh 3vw; /* تقليل المسافة الفاصلة من الأعلى */
-    margin-top: 0vh;  /* إزالة الهامش العلوي لرفع المنيو */
+    padding: 1vh 3vw;
+    margin-top: 0vh;
     overflow-x: hidden;
 }
 
@@ -159,7 +173,6 @@
     color: #b61b1b;
 }
 
-/* تأثير الضباب وإضافة النص "لاحقاً" */
 .unavailable {
     opacity: 0.5;
     pointer-events: none;
@@ -185,9 +198,6 @@
     margin: 20px 0;
 }
 
-/* استعلامات الوسائط لجعل التصميم متجاوبًا */
-
-/* لأجهزة التابلت */
 @media (min-width: 601px) and (max-width: 1024px) {
     .icon-item {
         max-width: 20vw;
@@ -198,8 +208,9 @@
     }
 
     .section-item {
-        padding: 10px 20px;
-        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
     }
 
     .menu-content {
@@ -219,7 +230,6 @@
     }
 }
 
-/* لأجهزة الكمبيوتر المكتبية */
 @media (min-width: 1025px) {
     .icon-item {
         max-width: 15vw;
@@ -230,8 +240,9 @@
     }
 
     .section-item {
-        padding: 10px 20px;
-        font-size: 18px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 
     .menu-content {
@@ -258,7 +269,6 @@
     color: #89598c;
 }
 
-/* بطاقة "نبذة عنا" */
 .about-card {
     position: fixed;
     bottom: 400px;
@@ -285,7 +295,6 @@
     line-height: 1.5;
 }
 
-/* بطاقة "رأيك يهمنا" */
 .feedback-card {
     position: fixed;
     bottom: 450px;
@@ -334,7 +343,6 @@
     background-color: #89598c;
 }
 
-/* تصميم بطاقة المنتج (المودال) */
 .product-modal {
     position: fixed;
     top: 50%;
@@ -399,7 +407,6 @@
     background-color: #89598c;
 }
 
-/* تأثير الظهور */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -412,13 +419,13 @@
 }
 
 .icon-item a {
-    text-decoration: none; /* إزالة الخط السفلي من الروابط */
+    text-decoration: none;
 }
 
 .icon-item a:hover {
-    text-decoration: none; /* منع ظهور الخط السفلي عند تحريك المؤشر فوق الرابط */
+    text-decoration: none;
 }
 
 .no-underline {
-    text-decoration: none; /* إزالة الخط السفلي من الروابط */
+    text-decoration: none;
 }

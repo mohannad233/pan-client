@@ -6,10 +6,10 @@ import {
   faCommentDots,
   faHouseUser,
   faFire,
-  faBreadSlice, // أيقونة للسندويتشات
-  faDrumstickBite, // أيقونة للصوصات
-  faGlassWhiskey, // أيقونة للعصيرات
-  faEgg, // أيقونة للفطور
+  faBreadSlice,
+  faDrumstickBite,
+  faGlassWhiskey,
+  faEgg,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -98,12 +98,10 @@ const Menu = () => {
       <div className="secondary-icons">
         <div className="icon-item">
           <Link to="/" className="home-icon">
-            <FontAwesomeIcon
-              icon={faHouseUser}
-              size="lg"
-              style={{ color: "#89598c" }}
-            />
-            <span style={{ color: "#89598c" }}> </span>
+            <div className="icon-circle">
+              <FontAwesomeIcon icon={faHouseUser} size="lg" />
+            </div>
+            <span>الرئيسية</span>
           </Link>
         </div>
         <div className="icon-item">
@@ -113,12 +111,10 @@ const Menu = () => {
             rel="noopener noreferrer"
             className="no-underline"
           >
-            <FontAwesomeIcon
-              icon={faLocationArrow}
-              size="2x"
-              style={{ color: "#89598c" }}
-            />
-            <span style={{ color: "#89598c" }}>الموقع</span>
+            <div className="icon-circle">
+              <FontAwesomeIcon icon={faLocationArrow} size="lg" />
+            </div>
+            <span>الموقع</span>
           </a>
         </div>
         <div className="icon-item">
@@ -130,12 +126,10 @@ const Menu = () => {
               textDecoration: "none",
             }}
           >
-            <FontAwesomeIcon
-              icon={faClipboardList}
-              size="2x"
-              style={{ color: "#89598c" }}
-            />
-            <span style={{ color: "#89598c" }}>القائمة الذكية</span>
+            <div className="icon-circle">
+              <FontAwesomeIcon icon={faClipboardList} size="lg" />
+            </div>
+            <span>القائمة الذكية</span>
           </Link>
         </div>
         <div className="icon-item">
@@ -143,16 +137,13 @@ const Menu = () => {
             style={{
               textAlign: "center",
               cursor: "pointer",
-              color: "#89598c",
             }}
             onClick={() => setShowFeedbackCard(!showFeedbackCard)}
           >
-            <FontAwesomeIcon
-              icon={faCommentDots}
-              size="2x"
-              style={{ color: "#89598c" }}
-            />
-            <span style={{ color: "#89598c" }}>رأيك يهمنا</span>
+            <div className="icon-circle">
+              <FontAwesomeIcon icon={faCommentDots} size="lg" />
+            </div>
+            <span>رأيك يهمنا</span>
           </div>
         </div>
       </div>
@@ -174,7 +165,7 @@ const Menu = () => {
             required
           />
           <textarea
-            placeholder="  اقتراحك "
+            placeholder="اقتراحك"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
