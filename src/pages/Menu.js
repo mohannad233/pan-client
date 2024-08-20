@@ -6,7 +6,6 @@ import {
   faComment,
   faFire,
   faHome,
-  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -96,18 +95,14 @@ const Menu = () => {
         <div className="icon-item">
           <Link
             to="/"
-            style={{
-              textAlign: "center",
-              color: "#89598c",
-              textDecoration: "none",
-            }}
+            className="home-icon"
           >
             <FontAwesomeIcon
               icon={faHome}
               size="2x"
               style={{ color: "#89598c" }}
             />
-            <span style={{ color: "#89598c" }}> </span>
+            <span style={{ color: "#89598c" }}>الصفحة الرئيسية</span>
           </Link>
         </div>
         <div className="icon-item">
