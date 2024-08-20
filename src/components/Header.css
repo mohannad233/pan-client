@@ -1,35 +1,19 @@
 .menu-header {
     position: relative;
     width: 100%;
-    height: 250px; /* تقليل ارتفاع الخلفية */
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-}
-
-.background-container {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: backgroundMove 10s infinite alternate ease-in-out; /* إضافة حركة للخلفية */
 }
 
 .background-image {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    z-index: -1;
     filter: brightness(0.7);
-}
-
-@keyframes backgroundMove {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1.1);
-    }
 }
 
 .header-content {
@@ -38,16 +22,17 @@
     align-items: center;
     position: relative;
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 .logo-container {
-    margin-top: 150px; /* تعديل المسافة فوق الشعار */
+    margin-top: 390px;
+    position: relative; /* لجعل تأثير الإضاءة حول الشعار */
 }
 
 .logo-image {
-    width: 80px; /* تقليل حجم الشعار */
-    height: 80px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     box-shadow: 0 0 15px rgba(233, 72, 236, 0.6), 0 0 30px rgba(233, 72, 236, 0.4); /* تأثير الإضاءة */
     transition: box-shadow 0.5s ease-in-out;
@@ -59,7 +44,8 @@
 
 .icons-container {
     position: absolute;
-    bottom: -20px; /* تعديل المسافة تحت الأيقونات */
+    bottom: -50px;
+    left: 50px; /* تم تغيير الموضع إلى اليسار */
     display: flex;
     justify-content: center;
 }
