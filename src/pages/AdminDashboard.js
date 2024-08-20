@@ -78,7 +78,7 @@ const AdminDashboard = () => {
     setName(product.name);
     setPrice(product.price);
     setCalories(product.calories || "");
-    setSection(product.section); // تعديل هنا لضمان تطابق مع البيانات من الخادم
+    setSection(product.section); // التأكد من استخدام الخاصية الصحيحة
     setAvailable(product.available ? "متاح" : "غير متاح");
     setEditMode(true);
     setEditProductId(product.id);
@@ -106,7 +106,7 @@ const AdminDashboard = () => {
 
   // تنظيم المنتجات حسب الأقسام
   const groupedProducts = products.reduce((acc, product) => {
-    const section = product.section || "غير محدد"; // تعديل هنا لتطابق مع اسم الخاصية الصحيح
+    const section = product.section || "غير محدد";
     if (!acc[section]) {
       acc[section] = [];
     }
@@ -198,7 +198,7 @@ const AdminDashboard = () => {
                   <h3>{product.name}</h3>
                   <p>السعر: ${product.price}</p>
                   <p>السعرات الحرارية: {product.calories} kcal</p>
-                  <p>القسم: {product.section}</p> {/* تعديل هنا لتطابق مع البيانات */}
+                  <p>القسم: {product.section}</p>
                   <p>متاح: {product.available ? "نعم" : "لا"}</p>
                   <button
                     onClick={() => handleEditProduct(product)}
