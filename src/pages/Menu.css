@@ -36,10 +36,10 @@
     align-items: center;
     width: 60px;
     height: 60px;
-    background-color: transparent;
+    background-color: transparent; /* إزالة الخلفية */
     border-radius: 50%;
     margin-bottom: 5px;
-    font-size: 3.5vw;
+    font-size: 3.5vw; /* تكبير الأيقونات */
 }
 
 .icon-item span {
@@ -82,19 +82,14 @@
     color: #89598c;
     width: 70px;
     height: 70px;
-    font-size: 4.5vw;
+    font-size: 4.5vw; /* تكبير الأيقونات */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: transparent;
-}
-
-.section-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    background-color: transparent; /* إزالة الخلفية */
 }
 
 .section-item span {
     margin-top: 5px;
-    font-size: 3.5vw;
+    font-size: 3.5vw; /* تكبير النص */
     color: inherit;
 }
 

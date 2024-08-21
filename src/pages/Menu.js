@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMapMarkerAlt,
-  faListAlt,
-  faComments,
-  faHouseChimney, // New Home icon
-  faSandwich, // New icon for Sandwiches
-  faPepperHot, // New icon for Sauces
-  faCocktail, // New icon for Drinks
-  faBacon, // New icon for Breakfast
+  faLocationArrow,
+  faClipboardList,
+  faCommentDots,
+  faHome, // Updated home icon
+  faBreadSlice,
+  faGlassWhiskey,
+  faEgg,
+  faBottleDroplet, // Updated sauce icon to a better representative
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -43,12 +43,7 @@ const Menu = () => {
     setActiveSection(sectionId.split("-")[1]);
   };
 
-  const sections = [
-    { name: "سندويتشات", icon: faSandwich },
-    { name: "صوصات", icon: faPepperHot },
-    { name: "عصيرات", icon: faCocktail },
-    { name: "فطور", icon: faBacon },
-  ];
+  const sections = ["سندويتشات", "صوصات", "عصيرات", "فطور"];
 
   const groupedProducts = products.reduce((acc, product) => {
     const section = product.sections || "غير محدد";
@@ -102,7 +97,7 @@ const Menu = () => {
       <div className="secondary-icons">
         <div className="icon-item">
           <Link to="/" className="home-icon">
-            <FontAwesomeIcon icon={faHouseChimney} size="lg" />
+            <FontAwesomeIcon icon={faHome} size="lg" />
           </Link>
         </div>
         <div className="icon-item">
@@ -112,7 +107,7 @@ const Menu = () => {
             rel="noopener noreferrer"
             className="no-underline"
           >
-            <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
+            <FontAwesomeIcon icon={faLocationArrow} size="lg" />
             <span>الموقع</span>
           </a>
         </div>
@@ -125,7 +120,7 @@ const Menu = () => {
               textDecoration: "none",
             }}
           >
-            <FontAwesomeIcon icon={faListAlt} size="lg" />
+            <FontAwesomeIcon icon={faClipboardList} size="lg" />
             <span>القائمة الذكية</span>
           </Link>
         </div>
@@ -137,7 +132,7 @@ const Menu = () => {
             }}
             onClick={() => setShowFeedbackCard(!showFeedbackCard)}
           >
-            <FontAwesomeIcon icon={faComments} size="lg" />
+            <FontAwesomeIcon icon={faCommentDots} size="lg" />
             <span>رأيك يهمنا</span>
           </div>
         </div>
@@ -172,14 +167,25 @@ const Menu = () => {
       <div className="sections-grid sticky-sections">
         {sections.map((section) => (
           <div
-            key={section.name}
+            key={section}
             className={`section-item ${
-              activeSection === section.name ? "active" : ""
+              activeSection === section ? "active" : ""
             }`}
-            onClick={() => scrollToSection(`section-${section.name}`)}
+            onClick={() => scrollToSection(`section-${section}`)}
           >
-            <FontAwesomeIcon icon={section.icon} size="2x" />
-            <span>{section.name}</span>
+            <FontAwesomeIcon
+              icon={
+                section === "سندويتشات"
+                  ? faBreadSlice
+                  : section === "صوصات"
+                  ? faBottleDroplet
+                  : section === "عصيرات"
+                  ? faGlassWhiskey
+                  : faEgg
+              }
+              size="2x"
+            />
+            <span>{section}</span>
           </div>
         ))}
       </div>
@@ -187,13 +193,9 @@ const Menu = () => {
       <main className="menu-content">
         <h1>Menu</h1>
         {sections.map((section) => (
-          <div
-            key={section.name}
-            id={`section-${section.name}`}
-            className="menu-section"
-          >
+          <div key={section} id={`section-${section}`} className="menu-section">
             <div className="product-list">
-              {groupedProducts[section.name]?.map((product) => (
+              {groupedProducts[section]?.map((product) => (
                 <div
                   className={`product-card ${
                     product.available ? "" : "unavailable"
@@ -216,7 +218,7 @@ const Menu = () => {
                 </div>
               ))}
             </div>
-            {section.name !== sections.slice(-1)[0].name && (
+            {section !== sections.slice(-1)[0] && (
               <hr className="section-divider" />
             )}
           </div>
