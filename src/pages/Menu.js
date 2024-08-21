@@ -98,10 +98,7 @@ const Menu = () => {
       <div className="secondary-icons">
         <div className="icon-item">
           <Link to="/" className="home-icon">
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faHouseUser} size="lg" />
-            </div>
-            <span>الرئيسية</span>
+            <FontAwesomeIcon icon={faHouseUser} size="lg" />
           </Link>
         </div>
         <div className="icon-item">
@@ -111,9 +108,7 @@ const Menu = () => {
             rel="noopener noreferrer"
             className="no-underline"
           >
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faLocationArrow} size="lg" />
-            </div>
+            <FontAwesomeIcon icon={faLocationArrow} size="lg" />
             <span>الموقع</span>
           </a>
         </div>
@@ -126,9 +121,7 @@ const Menu = () => {
               textDecoration: "none",
             }}
           >
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faClipboardList} size="lg" />
-            </div>
+            <FontAwesomeIcon icon={faClipboardList} size="lg" />
             <span>القائمة الذكية</span>
           </Link>
         </div>
@@ -140,9 +133,7 @@ const Menu = () => {
             }}
             onClick={() => setShowFeedbackCard(!showFeedbackCard)}
           >
-            <div className="icon-circle">
-              <FontAwesomeIcon icon={faCommentDots} size="lg" />
-            </div>
+            <FontAwesomeIcon icon={faCommentDots} size="lg" />
             <span>رأيك يهمنا</span>
           </div>
         </div>
@@ -183,20 +174,18 @@ const Menu = () => {
             }`}
             onClick={() => scrollToSection(`section-${section}`)}
           >
-            <div className="icon-circle">
-              <FontAwesomeIcon
-                icon={
-                  section === "سندويتشات"
-                    ? faBreadSlice
-                    : section === "صوصات"
-                    ? faDrumstickBite
-                    : section === "عصيرات"
-                    ? faGlassWhiskey
-                    : faEgg
-                }
-                size="lg"
-              />
-            </div>
+            <FontAwesomeIcon
+              icon={
+                section === "سندويتشات"
+                  ? faBreadSlice
+                  : section === "صوصات"
+                  ? faDrumstickBite
+                  : section === "عصيرات"
+                  ? faGlassWhiskey
+                  : faEgg
+              }
+              size="lg"
+            />
             <span>{section}</span>
           </div>
         ))}
@@ -245,8 +234,11 @@ const Menu = () => {
       </main>
 
       {selectedProduct && (
-        <div className="product-modal" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-content">
+        <div
+          className="product-modal"
+          onClick={handleCloseModal}
+        >
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2>{selectedProduct.name}</h2>
             <img src={selectedProduct.image} alt={selectedProduct.name} />
             <div className="product-details">
