@@ -1,4 +1,3 @@
-// Menu.js
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,9 +6,9 @@ import {
   faCommentDots,
   faHome, // Updated home icon
   faBreadSlice,
-  faUtensilSpoon, // Updated sauce icon
   faGlassWhiskey,
   faEgg,
+  faBottleDroplet, // Updated sauce icon to a better representative
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -179,7 +178,7 @@ const Menu = () => {
                 section === "سندويتشات"
                   ? faBreadSlice
                   : section === "صوصات"
-                  ? faUtensilSpoon
+                  ? faBottleDroplet
                   : section === "عصيرات"
                   ? faGlassWhiskey
                   : faEgg
