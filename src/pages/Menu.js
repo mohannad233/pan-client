@@ -5,10 +5,9 @@ import {
   faLocationArrow,
   faClipboardList,
   faCommentDots,
-  faHouseChimney, // Updated home icon
-  faFire,
+  faHome, // Updated home icon
   faBreadSlice,
-  faWineBottle, // Updated sauce icon
+  faUtensilSpoon, // Updated sauce icon
   faGlassWhiskey,
   faEgg,
 } from "@fortawesome/free-solid-svg-icons";
@@ -99,7 +98,7 @@ const Menu = () => {
       <div className="secondary-icons">
         <div className="icon-item">
           <Link to="/" className="home-icon">
-            <FontAwesomeIcon icon={faHouseChimney} size="lg" />
+            <FontAwesomeIcon icon={faHome} size="lg" />
           </Link>
         </div>
         <div className="icon-item">
@@ -180,7 +179,7 @@ const Menu = () => {
                 section === "سندويتشات"
                   ? faBreadSlice
                   : section === "صوصات"
-                  ? faWineBottle
+                  ? faUtensilSpoon
                   : section === "عصيرات"
                   ? faGlassWhiskey
                   : faEgg
