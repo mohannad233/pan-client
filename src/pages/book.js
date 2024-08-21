@@ -22,7 +22,7 @@ const Book = () => {
 
   const renderSectionPages = (section) => {
     const filteredProducts = products.filter(
-      (product) => product.Sections === section
+      (product) => product.sections === section
     );
     const pages = [];
 
