@@ -18,12 +18,7 @@ import axios from "../services/axios";
 const Menu = () => {
   const [products, setProducts] = useState([]);
   const [activeSection, setActiveSection] = useState("سندويتشات");
-  const [showFeedbackCard, setShowFeedbackCard] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
-
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [message, setMessage] = useState("");
 
   const fetchProducts = async () => {
     try {
@@ -59,6 +54,8 @@ const Menu = () => {
     return acc;
   }, {});
 
+  // Removing the "رأيك يهمنا" section as a comment
+  /*
   const handleClickOutside = (e) => {
     if (
       !e.target.closest(".feedback-card") &&
@@ -87,6 +84,7 @@ const Menu = () => {
     )}`;
     window.open(url, "_blank");
   };
+  */
 
   const handleProductClick = (product) => {
     setSelectedProduct(product);
@@ -112,7 +110,7 @@ const Menu = () => {
             rel="noopener noreferrer"
             className="no-underline"
           >
-            <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" />
+            <FontAwesomeIcon icon={faMapMarkerAlt} size="lg" color="#89598c" />
             <span>الموقع</span>
           </a>
         </div>
@@ -129,45 +127,7 @@ const Menu = () => {
             <span>القائمة الذكية</span>
           </Link>
         </div>
-        <div className="icon-item">
-          <div
-            style={{
-              textAlign: "center",
-              cursor: "pointer",
-            }}
-            onClick={() => setShowFeedbackCard(!showFeedbackCard)}
-          >
-            <FontAwesomeIcon icon={faComments} size="lg" />
-            <span>رأيك يهمنا</span>
-          </div>
-        </div>
       </div>
-
-      {showFeedbackCard && (
-        <div className="feedback-card">
-          <h2>رأيك يهمنا</h2>
-          <input
-            type="text"
-            placeholder="الاسم (اختياري)"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="رقم الجوال"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            required
-          />
-          <textarea
-            placeholder="اقتراحك"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            required
-          />
-          <button onClick={handleSendMessage}>إرسال</button>
-        </div>
-      )}
 
       <div className="sections-grid sticky-sections">
         {sections.map((section) => (
@@ -216,9 +176,6 @@ const Menu = () => {
                 </div>
               ))}
             </div>
-            {section.name !== sections.slice(-1)[0].name && (
-              <hr className="section-divider" />
-            )}
           </div>
         ))}
       </main>
