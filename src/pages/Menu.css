@@ -1,3 +1,4 @@
+/* Menu.css */
 .menu-page {
     display: flex;
     flex-direction: column;
@@ -246,7 +247,7 @@
 }
 
 .modal-content button:hover {
-    background-color: #89598c; /* Updated the color code */
+    background-color: #89598c;
 }
 
 @keyframes fadeIn {

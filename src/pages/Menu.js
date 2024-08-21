@@ -1,13 +1,14 @@
+// Menu.js
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationArrow,
   faClipboardList,
   faCommentDots,
-  faHouseUser,
+  faHouseChimney, // Updated home icon
   faFire,
   faBreadSlice,
-  faDrumstickBite,
+  faWineBottle, // Updated sauce icon
   faGlassWhiskey,
   faEgg,
 } from "@fortawesome/free-solid-svg-icons";
@@ -98,7 +99,7 @@ const Menu = () => {
       <div className="secondary-icons">
         <div className="icon-item">
           <Link to="/" className="home-icon">
-            <FontAwesomeIcon icon={faHouseUser} size="lg" />
+            <FontAwesomeIcon icon={faHouseChimney} size="lg" />
           </Link>
         </div>
         <div className="icon-item">
@@ -179,7 +180,7 @@ const Menu = () => {
                 section === "سندويتشات"
                   ? faBreadSlice
                   : section === "صوصات"
-                  ? faDrumstickBite
+                  ? faWineBottle
                   : section === "عصيرات"
                   ? faGlassWhiskey
                   : faEgg
