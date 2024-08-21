@@ -33,7 +33,7 @@ const Home = () => {
         </Link>
       </div>
        }
-      <header classNa me="home-header">
+      <header className="home-header">
         <img src={logo} alt="بان تيكه" className="logo animate-logo" />
         <h1 className="animate-text highlight-text">{displayText}</h1>
         <div className="social-icons">
@@ -75,12 +75,12 @@ const Home = () => {
           <FaPhoneAlt className="nav-icon" /> تواصل معنا - Contact Us
         </Link>
         <a
-          href="https://maps.app.goo.gl/vWviT2ZgCudpt7Mq5?g_st=com.google.maps.preview.copy"
+          href="https://www.google.com/maps/place/%D8%A8%D8%A7%D9%86+%D8%B3%D8%A7%D9%86%D8%AF%D9%88%D8%AA%D8%B4+%7C+PAN+Sandwich%E2%80%AD/@24.0845273,38.0416806,17z/data=!4m8!3m7!1s0x15b9070078c77f37:0xe3a2506858430826!8m2!3d24.0845273!4d38.0416806!9m1!1b1!16s%2Fg%2F11lmhxqb2t?entry=ttu"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-link"
         >
-          <FaHeart className="nav-icon" /> قيمنا - Values
+          <FaHeart className="nav-icon" /> قيمنا - Review Us
         </a>
       </nav>
       <div className="home-background"></div>
