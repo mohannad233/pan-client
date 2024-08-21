@@ -5,10 +5,10 @@ import {
   faListAlt,
   faComments,
   faHouseChimney, // New Home icon
-  faSandwich, // New icon for Sandwiches
-  faPepperHot, // New icon for Sauces
-  faCocktail, // New icon for Drinks
-  faBacon, // New icon for Breakfast
+  faHamburger, // Updated to an available icon for Sandwiches
+  faPepperHot,
+  faCocktail,
+  faBacon,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
 import "./Menu.css";
@@ -44,7 +44,7 @@ const Menu = () => {
   };
 
   const sections = [
-    { name: "سندويتشات", icon: faSandwich },
+    { name: "سندويتشات", icon: faHamburger },
     { name: "صوصات", icon: faPepperHot },
     { name: "عصيرات", icon: faCocktail },
     { name: "فطور", icon: faBacon },
