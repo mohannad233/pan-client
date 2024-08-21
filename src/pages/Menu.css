@@ -82,7 +82,7 @@
     color: #89598c;
     width: 70px;
     height: 70px;
-    font-size: 3.5vw; /* تكبير الأيقونات */
+    font-size: 4.5vw; /* تكبير الأيقونات */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: transparent; /* إزالة الخلفية */
 }
@@ -157,16 +157,11 @@
     margin-top: 10px;
 }
 
-.product-price, .product-calories {
+.product-price {
     font-size: 3.5vw;
     color: #333;
     display: flex;
     align-items: center;
-}
-
-.product-price svg, .product-calories svg {
-    margin-right: 5px;
-    color: #b61b1b;
 }
 
 .unavailable {
@@ -233,13 +228,9 @@
     margin-top: 10px;
 }
 
-.modal-content .product-price, .modal-content .product-calories {
+.modal-content .product-price {
     font-size: 18px;
     color: #333;
-}
-
-.modal-content .product-price svg, .modal-content .product-calories svg {
-    margin-right: 5px;
 }
 
 .modal-content button {
@@ -255,7 +246,7 @@
 }
 
 .modal-content button:hover {
-    background-color: #89598c;
+    background-color: #89598c; /* Updated the color code */
 }
 
 @keyframes fadeIn {

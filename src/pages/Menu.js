@@ -184,7 +184,7 @@ const Menu = () => {
                   ? faGlassWhiskey
                   : faEgg
               }
-              size="lg"
+              size="2x"
             />
             <span>{section}</span>
           </div>
@@ -214,13 +214,6 @@ const Menu = () => {
                     <h3 className="product-name">{product.name}</h3>
                     <div className="product-details">
                       <div className="product-price">{product.price} SR</div>
-                      <div className="product-calories">
-                        <FontAwesomeIcon
-                          icon={faFire}
-                          style={{ color: "#b61b1b" }}
-                        />{" "}
-                        {product.calories} kcal
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -234,19 +227,12 @@ const Menu = () => {
       </main>
 
       {selectedProduct && (
-        <div
-          className="product-modal"
-          onClick={handleCloseModal}
-        >
+        <div className="product-modal" onClick={handleCloseModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <h2>{selectedProduct.name}</h2>
             <img src={selectedProduct.image} alt={selectedProduct.name} />
             <div className="product-details">
               <div className="product-price">{selectedProduct.price} SR</div>
-              <div className="product-calories">
-                <FontAwesomeIcon icon={faFire} style={{ color: "#b61b1b" }} />{" "}
-                {selectedProduct.calories} kcal
-              </div>
             </div>
             <button onClick={handleCloseModal}>إغلاق</button>
           </div>
