@@ -50,6 +50,7 @@ const LoginRegister = () => {
           <button type="submit" className="submit-button">
             {isRegister ? "Register" : "Login"}
           </button>
+          {/* 
           <button
             type="button"
             className="switch-button"
@@ -57,6 +58,7 @@ const LoginRegister = () => {
           >
             {isRegister ? "Switch to Login" : "Switch to Register"}
           </button>
+          */}
         </form>
       </div>
     </div>
